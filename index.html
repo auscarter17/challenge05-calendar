@@ -18,6 +18,7 @@
       href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Work Day Scheduler</title>
   </head>
@@ -28,8 +29,49 @@
       <p class="lead">A simple calendar app for scheduling your work day</p>
       <p id="currentDay" class="lead"></p>
     </header>
+
+    <!-- container with hours of the workday displayed -->
     <div class="container">
-      <!-- Timeblocks go here -->
+      <div id="hour" class="row time-block">
+        <div class="col-2 hour" data-hour="9"><h4>9AM<h4></h4></div>
+        <textarea class="col-9 taskbox" id="scheduledTask"></textarea>
+        <div class="col-1 saveBtn"><span class="oi oi-circle-check"></span></div>
+      </div>
+      <div id="hour" class="row time-block">
+        <div class="col-2 hour" data-hour="10"><h4>10AM<h4></h4></div>
+        <textarea class="col-9" id="scheduledTask"></textarea>
+        <div class="col-1 saveBtn"></div>
+      </div>
+      <div id="hour" class="row time-block">
+        <div class="col-2 hour" data-hour="11"><h4>11AM<h4></h4></div>
+        <textarea class="col-9" id="scheduledTask"></textarea>
+        <div class="col-1 saveBtn"></div>
+      </div>
+      <div id="hour" class="row time-block">
+        <div class="col-2 hour" data-hour="12"><h4>12PM<h4></h4></div>
+        <textarea class="col-9" id="scheduledTask"></textarea>
+        <div class="col-1 saveBtn"></div>
+      </div>
+      <div id="hour" class="row time-block">
+        <div class="col-2 hour" data-hour="13"><h4>1PM<h4></h4></div>
+        <textarea class="col-9" id="scheduledTask"></textarea>
+        <div class="col-1 saveBtn"></div>
+      </div>
+      <div id="hour" class="row time-block">
+        <div class="col-2 hour" data-hour="14"><h4>2PM<h4></h4></div>
+        <textarea class="col-9" id="scheduledTask"></textarea>
+        <div class="col-1 saveBtn"></div>
+      </div>
+      <div id="hour" class="row time-block">
+        <div class="col-2 hour" data-hour="15"><h4>3PM<h4></h4></div>
+        <textarea class="col-9" id="scheduledTask"></textarea>
+        <div class="col-1 saveBtn"></div>
+      </div>
+      <div id="hour" class="row time-block">
+        <div class="col-2 hour" data-hour="16"><h4>4PM<h4></h4></div>
+        <textarea class="col-9" id="scheduledTask"></textarea>
+        <div class="col-1 saveBtn"></div>
+      </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
