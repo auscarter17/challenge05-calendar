@@ -43,20 +43,7 @@ function timeTracker() {
 }
 
 // load previously saved tasks if available
-function loadEvents() {
-    // Setting variable count equal to 9 - which is the start of the timeblocks
-    for (let count = 9; count < 18; count++) {
-      // Getting the count number from localStorage
-      localStorage.getItem(count);
-      // Setting myString equal to the getItem(count)
-      let myString = localStorage.getItem(count);
-      // If conditional for if there is a count in localStorage (a timeblock is clicked)
-      if (myString) {
-        // Then the ID for that count is pulled and it will place the value of myString
-        $("#" + count).val(myString);
-      }
-    }
-  }
+
 
 $(".saveBtn").on("click", function () {
     var text = $(this).siblings(".task").val();
