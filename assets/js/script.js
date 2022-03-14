@@ -7,8 +7,6 @@ function currentDay() {
   time.textContent = new Date().toString();
 }
 
-// let taskRestore = JSON.parse(localStorage.text, taskHour("")) || [];
-
 // refresh timetable every hour
 setInterval(currentDay, 1000 * 60);
 
@@ -42,17 +40,26 @@ function timeTracker() {
     })
 }
 
-// load previously saved tasks if available
-
-
-$(".saveBtn").on("click", function () {
-    var text = $(this).siblings(".task").val();
-  
-    var taskHour = parseInt($(this).parent().attr("id").split("hour")[1], text);
-    localStorage.setItem(text, taskHour);
-
-    loadEvents();
+// saves entered text to restore later
+$(".saveBtn").click(function (event) {
+    event.preventDefault();
+    var value = $(this).siblings(".task").val();
+    var time = $(this).parent().attr("id").split("hour")[1];
+    localStorage.setItem(time, value);
   });
 
+
+// restores previous saved vaules into text boxes
+$(document).ready(function () {
+  $("#hour9 .task").val(localStorage.getItem("9"));
+  $("#hour10 .task").val(localStorage.getItem("10"));
+  $("#hour11 .task").val(localStorage.getItem("11"));
+  $("#hour12 .task").val(localStorage.getItem("12"));
+  $("#hour13 .task").val(localStorage.getItem("13"));
+  $("#hour14 .task").val(localStorage.getItem("14"));
+  $("#hour15 .task").val(localStorage.getItem("15"));
+  $("#hour16 .task").val(localStorage.getItem("16"));
+});
+
+// when page is opened, checks time to set color coding
 timeTracker();
-loadEvents();
